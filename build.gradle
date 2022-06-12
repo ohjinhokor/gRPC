@@ -1,30 +1,55 @@
-plugins {
-	id 'org.springframework.boot' version '2.7.0'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
-}
-
-group = 'bepi'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
+buildscript {
+	ext {
+		springBootVersion = '2.6.2'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+		classpath "io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE"
 	}
 }
 
-repositories {
-	mavenCentral()
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+
+	group 'bepi'
+	version = '0.0.1-SNAPSHOT'
+
+	sourceCompatibility = '11'
+	targetCompatibility = '11'
+	compileJava.options.encoding = 'UTF-8'
+
+	repositories {
+		mavenCentral()
+	}
+
+	// 하위 모듈에서 공통으로 사용하는 세팅 추가
+	dependencies {
+		compileOnly 'org.projectlombok:lombok'
+
+		annotationProcessor 'org.projectlombok:lombok'
+		annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+		testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+	}
+
+	test {
+		useJUnitPlatform()
+	}
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+project(':server') {
+	bootJar { enabled = true }
+	jar { enabled = false }
+
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+	}
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
