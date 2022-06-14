@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "grpc.bepi.lib";
+option java_outer_classname = "GrpcRestApi";
+
+// Rest와 같은 방식으로 요청할 수 있도록 proto파일을 정의함.
+service RestApi {
+  rpc ping(Empty) returns (GResponse) {}
+  rpc get (GRequest) returns (GResponse) {}
+  rpc post (GRequest) returns (GResponse) {}
+  rpc put (GRequest) returns (GResponse) {}
+  rpc delete (GRequest) returns (GResponse) {}
+}
+
+// Http 규약과 비슷한 형식으로 정의함
+message GRequest {
+  string path = 1;
+  map<string, string> headers = 2;
+  bytes body = 3;
+}
+
+message GResponse {
+  int32 status = 1;
+  map<string, string> headers = 2;
+  bytes body = 3;
+}
+
+message Empty{}

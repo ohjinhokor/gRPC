@@ -1,4 +1,4 @@
-package restapi.customer;
+package api.restapi.customer;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -6,7 +6,8 @@ import lombok.Getter;
 @Getter
 @Builder
 public class ResponseDto {
-    private long key;
-    private Customer customer;
+
+	private long key;
+	private Customer customer;
 }
 

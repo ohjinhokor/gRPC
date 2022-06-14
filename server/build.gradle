@@ -13,6 +13,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // grpc 추가
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.13.1.RELEASE'
+
+    implementation files('libs/proto-0.0.1-SNAPSHOT-plain.jar')
 }
 
 test {
