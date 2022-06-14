@@ -1,4 +1,4 @@
-package api.restapi.customer;
+package client;
 
 import lombok.Getter;
 import lombok.Setter;
