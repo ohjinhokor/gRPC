@@ -57,14 +57,12 @@ project(':server') {
 }
 
 project(':client-library') {
-    bootJar { enabled = true }
-    jar { enabled = false }
+//    bootJar { enabled = false }
+//    jar { enabled = true }
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'net.devh:grpc-client-spring-boot-starter:2.13.1.RELEASE'
-
-//        api project(":server")
         api project(":proto")
     }
 }

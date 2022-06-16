@@ -13,18 +13,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class GrpcClientLibrary {
 
-	private Channel channel;
+	private static Channel channel = ManagedChannelBuilder.forTarget(
+		"static://localhost" + ":" + 9090).usePlaintext().build();
 
-	private RestApiGrpc.RestApiBlockingStub stub;
+	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
 
-	private ObjectMapper objectMapper = new ObjectMapper();
+	private static ObjectMapper objectMapper = new ObjectMapper();
 
-	public String grpcGetMethod() {
-		channel =
-			ManagedChannelBuilder.forTarget("static://localhost" + ":" + 9090).usePlaintext()
-				.build();
-		stub = RestApiGrpc.newBlockingStub(channel);
-
+	public static String grpcGetMethod() {
 		RequestDto requestDto = new RequestDto();
 		try {
 			String stringRequestDto = objectMapper.writeValueAsString(requestDto);
