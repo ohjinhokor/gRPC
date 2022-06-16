@@ -7,8 +7,8 @@
 
 #### 1. 기존에 제공되던 Public API 예시 (Http 헤더에 고객사 별로 제공된 key 값을 넣으면 각 고객사의 정보를 반환해주는 API)
 <img src="https://user-images.githubusercontent.com/71378447/174058894-995c8b76-b283-4108-9bbe-6dd665f01ec7.png" width = "400" height = "400" />
+<img src="https://user-images.githubusercontent.com/71378447/174061362-c0c2c7e6-d231-4998-b229-5cff7264ce6d.png" width = "400" height = "400" />
 
-&nbsp
 
 #### 2. Rest로 제공하던 API와 같은 데이터를 제공하는 library를 jar파일로 제공. jar 파일을 다운 받은 후 메서드를 호출하면 grpc stub을 통해 데이터를 주고 받음.
 
@@ -17,7 +17,7 @@
 <img src = "https://user-images.githubusercontent.com/71378447/174059609-6e96d780-3aad-4a88-b4c5-a0c7e00ec86d.png" width "200" height = "500" />
 
 2) 라이브러리 안에 있는 메서드 호출
-<img src = "https://user-images.githubusercontent.com/71378447/174060851-89d3ec2b-051f-4eb2-bbd8-0ffd6c989958.png" width "400" height = "400" />
+<img src = "https://user-images.githubusercontent.com/71378447/174061737-f8992774-6ebc-421e-aa12-b150a233dd96.png" width "400" height = "400" />
 
 
 GrpcClientService는 jar파일 안의 클래스입니다.
