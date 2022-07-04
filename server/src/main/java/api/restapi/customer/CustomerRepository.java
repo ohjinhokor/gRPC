@@ -20,10 +20,4 @@ public class CustomerRepository {
 	public Customer getCustomerByKey(long key) {
 		return customers.get(key);
 	}
-
-	public Customer setCustomerNameByKey(long key, String name) {
-		Customer customer = customers.get(key);
-		customer.changeName(name);
-		return customer;
-	}
 }

@@ -13,8 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class GrpcClientLibrary {
 
-	private static Channel channel = ManagedChannelBuilder.forTarget(
-		"static://localhost" + ":" + 9090).usePlaintext().build();
+	private static Channel channel = ManagedChannelBuilder.forTarget("static://localhost" + ":" + 9090).usePlaintext().build();
 
 	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
 

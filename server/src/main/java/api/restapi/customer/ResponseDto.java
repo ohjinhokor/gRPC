@@ -7,7 +7,6 @@ import lombok.Getter;
 @Builder
 public class ResponseDto {
 
-	private long key;
 	private Customer customer;
 }
 

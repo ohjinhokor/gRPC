@@ -11,11 +11,6 @@ public class CustomerService {
 
 	public ResponseDto getCustomerByKey(long key) {
 		Customer customer = customerRepository.getCustomerByKey(key);
-		return ResponseDto.builder().key(key).customer(customer).build();
-	}
-
-	public ResponseDto setCustomerNameByKey(long key, String name) {
-		Customer customer = customerRepository.setCustomerNameByKey(key, name);
-		return ResponseDto.builder().key(key).customer(customer).build();
+		return ResponseDto.builder().customer(customer).build();
 	}
 }

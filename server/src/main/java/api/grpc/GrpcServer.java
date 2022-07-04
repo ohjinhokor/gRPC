@@ -1,7 +1,6 @@
 package api.grpc;
 
 import api.restapi.customer.CustomerController;
-import api.restapi.customer.RequestDto;
 import api.restapi.customer.ResponseDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.ByteString;
@@ -17,8 +16,8 @@ import net.devh.boot.grpc.server.service.GrpcService;
 @RequiredArgsConstructor
 public class GrpcServer extends RestApiGrpc.RestApiImplBase {
 
-	// Controller가 여러개라면 Map으로
 	private final CustomerController customerController;
+
 	private final ObjectMapper objectMapper = new ObjectMapper();
 
 	@Override
@@ -26,13 +25,8 @@ public class GrpcServer extends RestApiGrpc.RestApiImplBase {
 		try {
 			String keyString = request.getHeadersMap().get("key");
 			Long key = Long.parseLong(keyString);
-			ByteString body = request.getBody();
 
-			//ByteString to String
-			String bodyString = body.toStringUtf8();
-
-			RequestDto requestDto = objectMapper.readValue(bodyString, RequestDto.class);
-			ResponseDto responseDto = customerController.setName(key, requestDto);
+			ResponseDto responseDto = customerController.getCustomerByKey(key);
 			String responseDtoString = objectMapper.writeValueAsString(responseDto);
 
 			ByteString bodyBytes = ByteString.copyFromUtf8(responseDtoString);
