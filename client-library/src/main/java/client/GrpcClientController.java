@@ -1,6 +1,7 @@
 package client;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/client")
 public class GrpcClientController {
 
-	@GetMapping("")
-	public static String getMethod() {
-		return GrpcClientLibrary.grpcGetMethod();
+	@GetMapping("/{key}")
+	public static String getMethod(@PathVariable int key) {
+		return GrpcClientLibrary.GrpcGetCustomerByKey(key);
 	}
 }
