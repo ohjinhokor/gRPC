@@ -15,6 +15,7 @@ public class CustomerController {
 
 	@GetMapping("")
 	public ResponseDto getCustomerByKey(@RequestHeader(name = "key") long key) {
-		return customerService.getCustomerByKey(key);
+		Customer customer = customerService.getCustomerByKey(key);
+		return ResponseDto.builder().customer(customer).build();
 	}
 }

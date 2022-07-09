@@ -1,6 +1,5 @@
 package client;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import grpc.bepi.lib.GRequest;
 import grpc.bepi.lib.GResponse;
 import grpc.bepi.lib.RestApiGrpc;
@@ -14,8 +13,6 @@ public class GrpcClientLibrary {
 	private static Channel channel = ManagedChannelBuilder.forTarget("static://158.247.239.191:" + 9090).usePlaintext().build();
 
 	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
-
-	private static ObjectMapper objectMapper = new ObjectMapper();
 
 	public static String GrpcGetCustomerByKey(int key) {
 		GResponse gResponse = stub.get(

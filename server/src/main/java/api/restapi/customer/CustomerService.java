@@ -9,8 +9,7 @@ public class CustomerService {
 
 	private final CustomerRepository customerRepository;
 
-	public ResponseDto getCustomerByKey(long key) {
-		Customer customer = customerRepository.getCustomerByKey(key);
-		return ResponseDto.builder().customer(customer).build();
+	public Customer getCustomerByKey(long key) {
+		return customerRepository.getCustomerByKey(key);
 	}
 }
