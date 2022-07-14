@@ -38,23 +38,23 @@
 
 
 ## 의존성 추가 후 메서드를 호출하는 과정
-### 순서
+- ### 순서
 
-1) 고객사에서 jar파일 의존성 추가
+#### 1) 고객사에서 라이브러리 추가
 
 ![스크린샷 2022-06-16 오후 8 22 20](https://user-images.githubusercontent.com/71378447/174062185-83fd3564-b97d-424d-9dd3-286ef4293996.png)
 
 
-2) 라이브러리 안에 있는 메서드 호출
+#### 2) 라이브러리 안에 있는 메서드 호출
  
 ![스크린샷 2022-06-16 오후 8 37 00](https://user-images.githubusercontent.com/71378447/174062745-ffdc511d-7b92-477b-83c6-9aa5a1c9bbf7.png)
 
 
-3) postman으로 테스트
+#### 3) postman으로 테스트
 
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/71378447/174060423-43664aad-b941-4d67-90a0-770aff7ceb93.png">
 
-4) 성공!
+#### 4) 성공!
 
 <img src="https://user-images.githubusercontent.com/71378447/174063495-ee9d8a2b-d8b2-4964-b220-f5f7aa0fc136.png" width = "400" height = "400" />
 
