@@ -10,10 +10,12 @@ import grpc.bepi.lib.RestApiGrpc;
 import io.grpc.stub.StreamObserver;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 
 @GrpcService
 @RequiredArgsConstructor
+@Slf4j
 public class GrpcServer extends RestApiGrpc.RestApiImplBase {
 
 	private final CustomerController customerController;
@@ -22,6 +24,9 @@ public class GrpcServer extends RestApiGrpc.RestApiImplBase {
 
 	@Override
 	public void get(GRequest request, StreamObserver<GResponse> responseObserver) {
+
+		log.info("GRPC API IS CALLED");
+
 		try {
 			String keyString = request.getHeadersMap().get("key");
 			Long key = Long.parseLong(keyString);
