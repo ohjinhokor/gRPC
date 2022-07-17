@@ -10,6 +10,17 @@
 &nbsp;
 
 
+# 라이브러리 목적
+
+- ### 속도
+- ### 고객사의 편의
+- ### 함수 호출의 제어권을 얻기 위함
+  - ex) 제공하는 jar 파일에 캐시를 적용. 고객사에서 짧은 시간내에 동일한 요청을 여러 번 하는 경우 캐싱된 데이터를 반환하도록 하여 서버에 들어오는 Request를 줄임
+
+&nbsp;
+&nbsp;
+
+
 ## 기존에 제공되던 Public API
 
 - ### 클라우드 서비스를 이용하여 서버를 배포한 상태입니다.
@@ -59,4 +70,35 @@
 
 <img width="320" alt="스크린샷 2022-07-17 오후 8 42 26" src="https://user-images.githubusercontent.com/71378447/179396561-e1e5d21f-2e8c-46a3-88b6-1e56c1347981.png">
 
+&nbsp;
+&nbsp;
 
+
+## 서버 API 호출 횟수 제어(ehcache 이용)
+
+### <캐시 적용 전>
+
+- #### 고객사의 코드 변경(한 번에 10번의 호출)
+
+![스크린샷 2022-07-17 오후 10 06 15](https://user-images.githubusercontent.com/71378447/179399789-02a8dacf-bb9e-42c9-b10b-6fee7c72649c.png)
+
+- #### API 호출 횟수를 체크하기 위해 서버 코드 변경
+
+![스크린샷 2022-07-17 오후 10 15 04](https://user-images.githubusercontent.com/71378447/179400169-4b7c7135-fbb5-40ae-97ea-6bcd4976b9b5.png)
+
+- #### 재배포 후 Test 결과 10번의 로깅 확인
+
+<img width="503" alt="스크린샷 2022-07-17 오후 10 18 30" src="https://user-images.githubusercontent.com/71378447/179400284-409ce4b7-9f44-43bc-9c1d-7ce6666cdeb0.png">
+
+- #### 수행 시간
+
+![스크린샷 2022-07-17 오후 10 08 19](https://user-images.githubusercontent.com/71378447/179400755-6b3e9a91-649a-41a9-9857-4142703776db.png)
+
+
+### <캐시 적용>
+
+- #### 라이브러리에 캐시 적용
+
+![스크린샷 2022-07-17 오후 10 23 48](https://user-images.githubusercontent.com/71378447/179400526-f5061f6e-b5f8-49c3-950f-de7be7256bcf.png)
+
+.. 작성 중...
