@@ -7,6 +7,7 @@ import grpc.bepi.lib.RestApiGrpc;
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import java.io.IOException;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,6 +17,8 @@ public class GrpcClient {
 	private static Channel channel = ManagedChannelBuilder.forTarget("static://158.247.239.191:" + 9090).usePlaintext().build();
 	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
 
+
+	@Cacheable(value = "grpcCache", key = "#key")
 	public ResponseDto getCustomerByKey(int key) {
 
 		GResponse gResponse = stub.get(GRequest.newBuilder().putHeaders("key", Long.toString(key)).build());

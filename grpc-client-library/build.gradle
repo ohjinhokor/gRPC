@@ -20,6 +20,9 @@ dependencies {
 
 	implementation 'net.devh:grpc-client-spring-boot-starter:2.13.1.RELEASE'
 	implementation files('libs/proto-0.0.1-SNAPSHOT-plain.jar')
+
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	implementation group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.6'
 }
 
 tasks.named('test') {
