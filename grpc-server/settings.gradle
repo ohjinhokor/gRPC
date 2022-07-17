@@ -1,6 +1,4 @@
 rootProject.name = 'grpc'
 include 'server'
 include 'proto'
-include 'client-library'
-include 'client-library'
 
