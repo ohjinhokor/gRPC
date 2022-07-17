@@ -15,6 +15,10 @@ public class Controller {
 
 	@GetMapping()
 	public ResponseDto grpcGetMethod() {
+
+		for (int i = 0; i < 9; i++) {
+			grpcClient.getCustomerByKey(111);
+		}
 		return grpcClient.getCustomerByKey(111);
 	}
 }
