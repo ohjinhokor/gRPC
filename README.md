@@ -30,7 +30,7 @@
 - ### Channel을 직접 생성한 후 stub을 연결합니다. stub을 통해 메서드를 호출한 후 결과를 반환합니다.
 - ### gRPC 포트는 9090으로 했습니다.
 
-<img width="989" alt="스크린샷 2022-07-17 오후 8 32 58" src="https://user-images.githubusercontent.com/71378447/179396224-ecd6c5b9-bf59-4fb0-8e72-abea05380e89.png">
+<img width="984" alt="스크린샷 2022-07-17 오후 9 19 35" src="https://user-images.githubusercontent.com/71378447/179398073-a669abd6-9684-42d4-9222-52cfc7fd20f2.png">
 
 
 &nbsp;
@@ -48,7 +48,7 @@
 
 #### 2) 라이브러리 안에 있는 메서드 호출
  
-<img width="427" alt="스크린샷 2022-07-17 오후 8 46 56" src="https://user-images.githubusercontent.com/71378447/179396685-4d37d604-d6a9-4330-8156-6d34160f27b8.png">
+<img width="389" alt="스크린샷 2022-07-17 오후 9 23 31" src="https://user-images.githubusercontent.com/71378447/179398131-e62b66f6-12d9-4ffd-982a-03b181f168df.png">
 
 
 #### 3) postman으로 테스트
