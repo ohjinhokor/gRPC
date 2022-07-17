@@ -10,13 +10,13 @@ import java.io.IOException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GrpcClientLibrary {
+public class GrpcClient {
 
 	private static ObjectMapper objectMapper = new ObjectMapper();
 	private static Channel channel = ManagedChannelBuilder.forTarget("static://158.247.239.191:" + 9090).usePlaintext().build();
 	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
 
-	public static ResponseDto getCustomerByKey(int key) {
+	public ResponseDto getCustomerByKey(int key) {
 
 		GResponse gResponse = stub.get(GRequest.newBuilder().putHeaders("key", Long.toString(key)).build());
 		String responseBody = gResponse.getBody().toStringUtf8();
