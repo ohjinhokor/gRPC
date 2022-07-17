@@ -1,5 +1,6 @@
 package client_library;
 
+import java.io.Serializable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Customer {
+public class Customer implements Serializable {
 
 	private long key;
 	private String name;
