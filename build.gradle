@@ -64,6 +64,7 @@ project(':client-library') {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'net.devh:grpc-client-spring-boot-starter:2.13.1.RELEASE'
         api project(":proto")
+        api project(":server")
     }
 }
 

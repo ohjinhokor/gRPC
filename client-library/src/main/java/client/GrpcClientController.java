@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GrpcClientController {
 
 	@GetMapping("/{key}")
-	public static String getMethod(@PathVariable int key) {
-		return GrpcClientLibrary.GrpcGetCustomerByKey(key);
+	public static ResponseDto getMethod(@PathVariable int key) {
+		return GrpcClientService.grpcGetMethod(key);
 	}
 }
