@@ -30,7 +30,7 @@
 - ### Channel을 직접 생성한 후 stub을 연결합니다. stub을 통해 메서드를 호출한 후 결과를 반환합니다.
 - ### gRPC 포트는 9090으로 했습니다.
 
-![스크린샷 2022-07-15 오전 1 25 55](https://user-images.githubusercontent.com/71378447/179031743-af1e52a0-e16e-4da1-a559-c893bdc53c54.png)
+<img width="989" alt="스크린샷 2022-07-17 오후 8 32 58" src="https://user-images.githubusercontent.com/71378447/179396224-ecd6c5b9-bf59-4fb0-8e72-abea05380e89.png">
 
 
 &nbsp;
@@ -42,12 +42,13 @@
 
 #### 1) 고객사에서 라이브러리 추가
 
-![스크린샷 2022-06-16 오후 8 22 20](https://user-images.githubusercontent.com/71378447/174062185-83fd3564-b97d-424d-9dd3-286ef4293996.png)
+<img width="289" alt="스크린샷 2022-07-17 오후 8 38 46" src="https://user-images.githubusercontent.com/71378447/179396370-48304f7f-85b0-43ac-b080-f6c7a5b8d4a6.png">
+
 
 
 #### 2) 라이브러리 안에 있는 메서드 호출
  
-![스크린샷 2022-06-16 오후 8 37 00](https://user-images.githubusercontent.com/71378447/174062745-ffdc511d-7b92-477b-83c6-9aa5a1c9bbf7.png)
+<img width="427" alt="스크린샷 2022-07-17 오후 8 46 56" src="https://user-images.githubusercontent.com/71378447/179396685-4d37d604-d6a9-4330-8156-6d34160f27b8.png">
 
 
 #### 3) postman으로 테스트
@@ -56,5 +57,6 @@
 
 #### 4) 성공!
 
-<img src="https://user-images.githubusercontent.com/71378447/174063495-ee9d8a2b-d8b2-4964-b220-f5f7aa0fc136.png" width = "400" height = "400" />
+<img width="320" alt="스크린샷 2022-07-17 오후 8 42 26" src="https://user-images.githubusercontent.com/71378447/179396561-e1e5d21f-2e8c-46a3-88b6-1e56c1347981.png">
+
 
