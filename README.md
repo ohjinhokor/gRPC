@@ -98,7 +98,38 @@
 ### <캐시 적용>
 
 - #### 라이브러리에 캐시 적용
+  - 다른 라이브러리 사용을 줄이기 위해 캐시를 직접 구현했습니다
+
+- #### 캐시가 적용된 코드
+  - 캐싱이 되어있다면 캐싱된 데이터 반환
+  - 캐싱이 되어있지 않다면 캐싱 후 데이터 반환
+  
+<img width="838" alt="스크린샷 2022-07-18 오후 6 55 43" src="https://user-images.githubusercontent.com/71378447/179488426-e9d54475-e5ff-4185-b5d0-9987c2de166e.png">
+
+- #### setCache 메서드
+  - 자바가 제공하는 Timer Util클래스를 이용해서 캐시 구현
+  - 캐시 유효 시간 10초.
+  
+<img width="442" alt="스크린샷 2022-07-18 오후 7 00 36" src="https://user-images.githubusercontent.com/71378447/179488862-3065a594-2747-4558-97da-272a4a164ad5.png">
+
+&nbsp;
+&nbsp;
+
+### <캐시 적용 후 테스트>
+
+- #### 고객사 코드 실행
+
+<img width="423" alt="스크린샷 2022-07-18 오후 7 16 16" src="https://user-images.githubusercontent.com/71378447/179491308-c85535f3-4705-416a-af7e-b3f2ccbf664a.png">
 
 
+- #### 서버 재배포 후 Test 결과 로깅 확인
+  - 10번의 요청 중 1번의 request만 서버로 들어온 것을 알 수 있음
+  
+![스크린샷 2022-07-18 오후 7 07 15](https://user-images.githubusercontent.com/71378447/179489897-c06dd5b8-6745-44a8-8dc7-01b26656534a.png)
 
-.. 작성 중...
+- #### 수행 시간
+  - 캐시 적용 후 수행 시간 단축 확인
+
+<img width="462" alt="스크린샷 2022-07-18 오후 7 11 36" src="https://user-images.githubusercontent.com/71378447/179490576-d4a5fcec-7d8f-4c73-80fe-d189c14c9ebb.png">
+
+
