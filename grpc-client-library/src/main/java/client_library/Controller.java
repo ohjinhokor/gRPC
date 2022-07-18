@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("grpc")
 public class Controller {
 
-	private final GrpcClient grpcClient;
+	private final GrpcClientLibrary grpcClientLibrary;
 
 	@GetMapping()
 	public ResponseDto grpcGetMethod() {
 
 		for (int i = 0; i < 9; i++) {
-			grpcClient.getCustomerByKey(111);
+			grpcClientLibrary.getCustomerByKey(111);
 		}
-		return grpcClient.getCustomerByKey(111);
+		return grpcClientLibrary.getCustomerByKey(111);
 	}
 }
