@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ResponseDto implements Serializable {
+public class ResponseDto {
 	private Customer customer;
 }

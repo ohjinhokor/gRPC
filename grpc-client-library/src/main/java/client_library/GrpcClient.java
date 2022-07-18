@@ -18,7 +18,6 @@ public class GrpcClient {
 	private static RestApiGrpc.RestApiBlockingStub stub = RestApiGrpc.newBlockingStub(channel);
 
 
-	@Cacheable(value = "grpcCache", key = "#key")
 	public ResponseDto getCustomerByKey(int key) {
 
 		GResponse gResponse = stub.get(GRequest.newBuilder().putHeaders("key", Long.toString(key)).build());

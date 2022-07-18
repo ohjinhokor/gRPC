@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Customer implements Serializable {
+public class Customer {
 
 	private long key;
 	private String name;
