@@ -41,7 +41,7 @@
 - ### Channel을 직접 생성한 후 stub을 연결합니다. stub을 통해 메서드를 호출한 후 결과를 반환합니다.
 - ### gRPC 포트는 9090으로 했습니다.
 
-<img width="984" alt="스크린샷 2022-07-17 오후 9 19 35" src="https://user-images.githubusercontent.com/71378447/179398073-a669abd6-9684-42d4-9222-52cfc7fd20f2.png">
+<img width="982" alt="스크린샷 2022-07-18 오후 6 14 52" src="https://user-images.githubusercontent.com/71378447/179481279-a2629b24-3a2c-491c-b82d-bdbcf5070a4f.png">
 
 
 &nbsp;
@@ -59,7 +59,7 @@
 
 #### 2) 라이브러리 안에 있는 메서드 호출
  
-<img width="389" alt="스크린샷 2022-07-17 오후 9 23 31" src="https://user-images.githubusercontent.com/71378447/179398131-e62b66f6-12d9-4ffd-982a-03b181f168df.png">
+<img width="426" alt="스크린샷 2022-07-18 오후 6 21 54" src="https://user-images.githubusercontent.com/71378447/179482136-6e72decf-d139-4eaf-b9d1-9b6e0c385696.png">
 
 
 #### 3) postman으로 테스트
@@ -74,7 +74,7 @@
 &nbsp;
 
 
-## 서버 API 호출 횟수 제어(ehcache 이용)
+## 서버 API 호출 횟수 제어(cache 이용)
 
 ### <캐시 적용 전>
 
@@ -86,7 +86,7 @@
 
 ![스크린샷 2022-07-17 오후 10 15 04](https://user-images.githubusercontent.com/71378447/179400169-4b7c7135-fbb5-40ae-97ea-6bcd4976b9b5.png)
 
-- #### 재배포 후 Test 결과 10번의 로깅 확인
+- #### 서버 재배포 후 Test 결과 로깅 확인
 
 <img width="503" alt="스크린샷 2022-07-17 오후 10 18 30" src="https://user-images.githubusercontent.com/71378447/179400284-409ce4b7-9f44-43bc-9c1d-7ce6666cdeb0.png">
 
@@ -99,6 +99,6 @@
 
 - #### 라이브러리에 캐시 적용
 
-![스크린샷 2022-07-17 오후 10 23 48](https://user-images.githubusercontent.com/71378447/179400526-f5061f6e-b5f8-49c3-950f-de7be7256bcf.png)
+
 
 .. 작성 중...
