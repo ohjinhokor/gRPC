@@ -128,7 +128,7 @@
 ![스크린샷 2022-07-18 오후 7 07 15](https://user-images.githubusercontent.com/71378447/179489897-c06dd5b8-6745-44a8-8dc7-01b26656534a.png)
 
 - #### 수행 시간
-  - 캐시 적용 후 수행 시간 단축 확인
+  - 캐시 적용 후 수행 시간 단축 : **967433000ns -> 9042ns**
 
 <img width="462" alt="스크린샷 2022-07-18 오후 7 11 36" src="https://user-images.githubusercontent.com/71378447/179490576-d4a5fcec-7d8f-4c73-80fe-d189c14c9ebb.png">
 
